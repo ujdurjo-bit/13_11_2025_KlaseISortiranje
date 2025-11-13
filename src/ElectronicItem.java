@@ -1,4 +1,14 @@
-package PACKAGE_NAME;
+public class ElectronicItem extends Product {
+    private int warrantyMonths;
 
-public class ElectronicItem {
+    public ElectronicItem(int productID, String name, double price, int warrantyMonths) {
+        super(productID, name, price);
+        this.warrantyMonths = warrantyMonths;
+    }
+
+    @Override
+    public String getDescription() {
+        return "Elektronički uređaj: " + name + " - jamstvo: " + warrantyMonths + " mjeseci:";
+    }
+
 }
